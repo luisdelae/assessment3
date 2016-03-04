@@ -1,0 +1,14 @@
+<div class="row col-md-12 text-center">
+  <form id="createHero">
+    <label for="alias">Alias: </label>
+    <input type="text" id="alias" name="alias" ng-model="alias"/>
+    <label for="first_name">First Name: </label>
+    <input type="text" id="first_name" name="first_name" ng-model="first_name"/>
+    <label for="last_name">Last Name: </label>
+    <input type="text" id="last_name" name="last_name" ng-model="last_name"/>
+    <label for="city">City: </label>
+    <input type="text" id="city" name="city" ng-model="city"/>
+    <select name="powers" ng-options="powers for powers in powersAvailable" ng-model="primary_power" required></select>
+    <button class="btn submit_hero" ng-click="addHero()">Submit Task</button>
+  </form>
+</div>

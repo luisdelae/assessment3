@@ -1,0 +1,29 @@
+<div class="row col-md-12 text-center">
+  <form id="gethero">
+    <select name="powers" ng-options="powers for powers in powersAvailable" ng-model="primary_power" required></select>
+    <button class="btn submit_hero" ng-click="getHero()">Get Heroes</button>
+  </form>
+
+  <div>
+    <ul ng-repeat="heroes in heroesArray">
+      <li>
+        {{heroes.alias}}
+      </li>
+      <li>
+        {{heroes.first_name}}
+      </li>
+      <li>
+        {{heroes.last_name}}
+      </li>
+      <li>
+        {{heroes.city}}
+      </li>
+      <li>
+        {{heroes.primary_power}}
+      </li>
+      <li>
+        <button ng-click="deleteHero(heroes._id)">Delete Hero</button>
+      </li>
+    </ul>
+  </div>
+</div>
